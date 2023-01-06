@@ -398,7 +398,7 @@
         </ul>
       </nav>
       <!-- partial -->
-      @yield('main')
+      @yield('main')  
       <!-- main-panel ends -->
       <!-- partial:partials/_footer.html -->
     <footer class="footer">
