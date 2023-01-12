@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\accounts;
-use App\Http\Requests\StoreaccountsRequest;
-use App\Http\Requests\UpdateaccountsRequest;
+use Illuminate\Http\Request;
 
-class AccountsController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +13,10 @@ class AccountsController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard');
     }
 
-    /**
+    /**   
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -31,10 +29,10 @@ class AccountsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreaccountsRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreaccountsRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +40,10 @@ class AccountsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\accounts  $accounts
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(accounts $accounts)
+    public function show($id)
     {
         //
     }
@@ -53,10 +51,10 @@ class AccountsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\accounts  $accounts
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(accounts $accounts)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +62,11 @@ class AccountsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateaccountsRequest  $request
-     * @param  \App\Models\accounts  $accounts
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateaccountsRequest $request, accounts $accounts)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +74,10 @@ class AccountsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\accounts  $accounts
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(accounts $accounts)
+    public function destroy($id)
     {
         //
     }

@@ -6,16 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Skydash Admin</title>
+
+  <script src="{{asset("../asset_admin/jquery-3.5.1.min.js")}}"></script> 
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset("../asset_admin/vendors/feather/feather.css")}}">
   <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
   <link rel="stylesheet" href="{{asset("../asset_admin/vendors/css/vendor.bundle.base.css")}}">
   <!-- endinject -->
-  <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css")}}">
-  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
-  <link rel="stylesheet" type="{{asset("../asset_admin/text/css" href="js/select.dataTables.min.css")}}">
-  <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="{{asset("../asset_admin/css/vertical-layout-light/style.css")}}">
   <!-- endinject -->
@@ -296,34 +293,34 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
+              <span class="menu-title">Thống kê</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Typography</a></li>
               </ul>
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+            <a class="nav-link" data-toggle="collapse" href="" aria-expanded="false" aria-controls="form-elements">
               <i class="icon-columns menu-icon"></i>
               <span class="menu-title">Form elements</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                <li class="nav-item "><a class="nav-link" href="">Basic Elements</a></li>
               </ul>
             </div>
           </li>
@@ -359,7 +356,7 @@
             </a>
             <div class="collapse" id="icons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Mdi icons</a></li>
               </ul>
             </div>
           </li>
@@ -371,8 +368,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Register </a></li>
               </ul>
             </div>
           </li>
@@ -416,14 +413,11 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
-
-  <!-- plugins:js -->
-  <script src="{{assset("../asset_admin/vendors/js/vendor.bundle.base.js")}}"></script>
+ 
+  @yield('js')
+  
   <!-- endinject -->
   <!-- Plugin js for this page -->
-  <script src="{{assset("../asset_admin/vendors/datatables.net/jquery.dataTables.js")}}"></script>
-  <script src="{{assset("../asset_admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js")}}"></script>
-  <script src="{{asset("../asset_admin/js/dataTables.select.min.js")}}"></script>
 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
@@ -434,10 +428,8 @@
   <script src="{{asset("../asset_admin/js/todolist.js")}}"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="{{asset("../asset_admin/js/dashboard.js")}}"></script>
-  <script src="{{asset("../asset_admin/js/Chart.roundedBarCharts.js")}}"></script>
   <!-- End custom js for this page-->
 </body>
 
-</html>
+</html> 
 

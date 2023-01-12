@@ -10,42 +10,48 @@
     //Add active class to nav-link based on url dynamically
     //Active class can be hard coded directly in html file also as required
 
-    function addActiveClass(element) {
-      if (current === "") {
-        //for root url
-        if (element.attr('href').indexOf("index.html") !== -1) {
-          element.parents('.nav-item').last().addClass('active');
-          if (element.parents('.sub-menu').length) {
-            element.closest('.collapse').addClass('show');
-            element.addClass('active');
-          }
-        }
-      } else {
-        //for other url
-        if (element.attr('href').indexOf(current) !== -1) {
-          element.parents('.nav-item').last().addClass('active');
-          if (element.parents('.sub-menu').length) {
-            element.closest('.collapse').addClass('show');
-            element.addClass('active');
-          }
-          if (element.parents('.submenu-item').length) {
-            element.addClass('active');
-          }
-        }
-      }
-    }
+    // function addActiveClass(element) {
+    //   if (current === "") {
+    //     //for root url
+    //     if (element.attr('href').indexOf("_admin/home") !== -1) {
+    //       element.parents('.nav-item').last().addClass('active');
+    //       if (element.parents('.sub-menu').length) {
+    //         element.closest('.collapse').addClass('show');
+    //         element.addClass('active');
+    //       }
+    //     }
+    //   } else {
+    //     //for other url
+    //     if (element.attr('href').indexOf(current) !== -1) {
+    //       element.parents('.nav-item').last().addClass('active');
+    //       if (element.parents('.sub-menu').length) {
+    //         element.closest('.collapse').addClass('show');
+    //         element.addClass('active');
+    //       }
+    //       if (element.parents('.submenu-item').length) {
+    //         element.addClass('active');
+    //       }
+    //     }
+    //   }
+    // }
 
-    var current = location.pathname.split("/").slice(-1)[0].replace(/^\/|\/$/g, '');
-    $('.nav li a', sidebar).each(function() {
-      var $this = $(this);
-      addActiveClass($this);
-    })
+    // var current = location.pathname.split("/").slice(-1)[0].replace(/^\/|\/$/g, '');
+    // $('.nav li a', sidebar).each(function() {
+    //   var $this = $(this);
+    //   addActiveClass($this);
+    // })
 
-    $('.horizontal-menu .nav li a').each(function() {
-      var $this = $(this);
-      addActiveClass($this);
-    })
+    // $('.horizontal-menu .nav li a').each(function() {
+    //   var $this = $(this);
+    //   addActiveClass($this);
+    // })
 
+    // process show sub menu when onclick parent menu
+    $('.nav .sub-menu').on("click", function() {
+      $(this).parent('li').children('.sub-menu').slideToggle();
+      $('collapse').toggleClass('show');
+    });
+    
     //Close other submenu in sidebar on opening any
 
     sidebar.on('show.bs.collapse', '.collapse', function() {
@@ -59,12 +65,12 @@
     function applyStyles() {
       //Applying perfect scrollbar
       if (!body.hasClass("rtl")) {
-        if ($('.settings-panel .tab-content .tab-pane.scroll-wrapper').length) {
-          const settingsPanelScroll = new PerfectScrollbar('.settings-panel .tab-content .tab-pane.scroll-wrapper');
-        }
-        if ($('.chats').length) {
-          const chatsScroll = new PerfectScrollbar('.chats');
-        }
+        // if ($('.settings-panel .tab-content .tab-pane.scroll-wrapper').length) {
+        //   const settingsPanelScroll = new PerfectScrollbar('.settings-panel .tab-content .tab-pane.scroll-wrapper');
+        // }
+        // if ($('.chats').length) {
+        //   const chatsScroll = new PerfectScrollbar('.chats');
+        // }
         if (body.hasClass("sidebar-fixed")) {
           if($('#sidebar').length) {
             var fixedSidebarScroll = new PerfectScrollbar('#sidebar .nav');
