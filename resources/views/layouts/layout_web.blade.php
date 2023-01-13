@@ -10,7 +10,6 @@
   <script src="{{asset("../asset_admin/jquery-3.5.1.min.js")}}"></script> 
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset("../asset_admin/vendors/feather/feather.css")}}">
-  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
   <link rel="stylesheet" href="{{asset("../asset_admin/vendors/css/vendor.bundle.base.css")}}">
   <!-- endinject -->
   <!-- inject:css -->
@@ -387,38 +386,38 @@
             </a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
-              <i class="icon-ban menu-icon"></i>
+            <a class="nav-link" href="#">
+              <i class="icon-box menu-icon"></i>
               <span class="menu-title">Quản lý đơn vị</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
-              <i class="icon-ban menu-icon"></i>
+            <a class="nav-link" href="#">
+              <i class="icon-layers menu-icon"></i>
               <span class="menu-title">Quản lý loại sản phẩm</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
-              <i class="icon-ban menu-icon"></i>
+            <a class="nav-link" href="#">
+              <i class="icon-briefcase menu-icon"></i>
               <span class="menu-title">Quản lý sản phẩm</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
-              <i class="icon-paper menu-icon"></i>
+            <a class="nav-link" href="#">
+              <i class="icon-cloud menu-icon"></i>
               <span class="menu-title">Quản lý kho</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
-              <i class="icon-paper menu-icon"></i>
+            <a class="nav-link" href="#">
+              <i class="icon-clock menu-icon"></i>
               <span class="menu-title">Lịch xử thao tác</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
-              <i class="icon-paper menu-icon"></i>
+            <a class="nav-link" href="#">
+              <i class="icon-help menu-icon"></i>
               <span class="menu-title">Đăng Xuất</span>
             </a>
           </li>
