@@ -383,31 +383,43 @@
           <li class="nav-item">
             <a class="nav-link" href="">
               <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard 1</span>
+              <span class="menu-title">Thống kê</span>
             </a>
           </li> 
           <li class="nav-item">
             <a class="nav-link" href="pages/documentation/documentation.html">
               <i class="icon-ban menu-icon"></i>
-              <span class="menu-title">Documentation 2</span>
+              <span class="menu-title">Quản lý đơn vị</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/documentation/documentation.html">
               <i class="icon-ban menu-icon"></i>
-              <span class="menu-title">Documentation 3</span>
+              <span class="menu-title">Quản lý loại sản phẩm</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/documentation/documentation.html">
               <i class="icon-ban menu-icon"></i>
-              <span class="menu-title">Documentation 4</span>
+              <span class="menu-title">Quản lý sản phẩm</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/documentation/documentation.html">
               <i class="icon-paper menu-icon"></i>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title">Quản lý kho</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Lịch xử thao tác</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Đăng Xuất</span>
             </a>
           </li>
         </ul>
