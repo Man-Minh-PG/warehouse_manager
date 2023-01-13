@@ -292,12 +292,6 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
           {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
@@ -312,7 +306,7 @@
               </ul>
             </div>
           </li> --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="" aria-expanded="false" aria-controls="form-elements">
               <i class="icon-columns menu-icon"></i>
               <span class="menu-title">Form elements</span>
@@ -323,8 +317,8 @@
                 <li class="nav-item "><a class="nav-link" href="">Basic Elements</a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">Charts</span>
@@ -335,8 +329,8 @@
                 <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="icon-grid-2 menu-icon"></i>
               <span class="menu-title">Tables</span>
@@ -347,8 +341,8 @@
                 <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
               <i class="icon-contract menu-icon"></i>
               <span class="menu-title">Icons</span>
@@ -359,8 +353,8 @@
                 <li class="nav-item"> <a class="nav-link" href="">Mdi icons</a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="icon-head menu-icon"></i>
               <span class="menu-title">User Pages</span>
@@ -372,8 +366,8 @@
                 <li class="nav-item"> <a class="nav-link" href=""> Register </a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
               <i class="icon-ban menu-icon"></i>
               <span class="menu-title">Error pages</span>
@@ -385,6 +379,30 @@
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
               </ul>
             </div>
+          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard 1</span>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="pages/documentation/documentation.html">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Documentation 2</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/documentation/documentation.html">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Documentation 3</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/documentation/documentation.html">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Documentation 4</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/documentation/documentation.html">

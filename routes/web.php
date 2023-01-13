@@ -25,6 +25,10 @@ Route::group(['controller' => UserController::class], function(){
     Route::get('/logout', 'logout')->name('logout');
 });
 
-Route::group(['prefix' => '_admin/home', 'controller' => HomeController::class, 'middleware' => 'auth'], function(){
+// Route::group(['prefix' => '_admin/home', 'controller' => HomeController::class, 'middleware' => 'auth'], function(){
+//     Route::get('/', 'index')->name('admin.home');
+// });
+
+Route::group(['prefix' => '_admin/home', 'controller' => HomeController::class], function(){
     Route::get('/', 'index')->name('admin.home');
 });
