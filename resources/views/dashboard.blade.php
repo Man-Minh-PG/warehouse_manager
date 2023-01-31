@@ -1,4 +1,7 @@
 @extends('layouts/layout_web')
+@section('css')
+<style src="{{asset("../asset_admin/bootstrap.min.css")}}"></style>
+@endsection
 @section('main')
 <div class="main-panel">
     <div class="content-wrapper">
@@ -50,18 +53,18 @@
             <div class="col-md-6 mb-4 stretch-card transparent">
               <div class="card card-tale">
                 <div class="card-body">
-                  <p class="mb-4">Today’s Bookings</p>
+                  <p class="mb-4">SẢN PHẨM CÒN ÍT</p>
                   <p class="fs-30 mb-2">4006</p>
-                  <p>10.00% (30 days)</p>
+                  <p>/ Sản phẩm</p>
                 </div>
               </div>
             </div>
             <div class="col-md-6 mb-4 stretch-card transparent">
               <div class="card card-dark-blue">
                 <div class="card-body">
-                  <p class="mb-4">Total Bookings</p>
+                  <p class="mb-4">TỔNG SẢN PHẨM Ở KHO</p>
                   <p class="fs-30 mb-2">61344</p>
-                  <p>22.00% (30 days)</p>
+                  <p>/ Sản phẩm</p>
                 </div>
               </div>
             </div>
@@ -70,18 +73,18 @@
             <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
               <div class="card card-light-blue">
                 <div class="card-body">
-                  <p class="mb-4">Number of Meetings</p>
+                  <p class="mb-4">TỔNG SỐ LOẠI SẢN PHẨM</p>
                   <p class="fs-30 mb-2">34040</p>
-                  <p>2.00% (30 days)</p>
+                  <p>/ Sản phẩm</p>
                 </div>
               </div>
             </div>
             <div class="col-md-6 stretch-card transparent">
               <div class="card card-light-danger">
                 <div class="card-body">
-                  <p class="mb-4">Number of Clients</p>
+                  <p class="mb-4">XUẤT HÀNG HÔM NAY</p>
                   <p class="fs-30 mb-2">47033</p>
-                  <p>0.22% (30 days)</p>
+                  <p>/ Sản phẩm</p>
                 </div>
               </div>
             </div>
@@ -94,6 +97,20 @@
           <div class="card">
             <div class="card-body">
               <p class="card-title">Advanced Table</p>
+             <!-- Example split danger button -->
+             <div class="btn-group">
+              <button type="button" class="btn btn-danger">Lọc</button>
+              <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sản phẩm còn ít</a>
+                <a class="dropdown-item" href="#">Sản phẩm trong kho</a>
+                <a class="dropdown-item" href="#">Đã xuất hôm nay</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">..</a>
+              </div>
+            </div>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -132,3 +149,8 @@
     <!-- content-wrapper ends -->
   </div>
 @endsection()
+@section('js')
+<script src="{{asset("../asset_admin/jquery-3.2.1.slim.min.js")}}"></script>
+<script src="{{asset("../asset_admin/jquery-3.5.1.min.js")}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+@endsection

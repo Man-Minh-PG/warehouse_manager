@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="{{asset("../asset_admin/css/vertical-layout-light/style.css")}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset("../asset_admin/images/favicon.png")}}" />
-
+  @yield('css')
 </head>
 <body>
   <div class="container-scroller">
