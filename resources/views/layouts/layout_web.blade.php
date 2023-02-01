@@ -14,6 +14,7 @@
   <!-- endinject -->
   <!-- inject:css -->
   <link rel="stylesheet" href="{{asset("../asset_admin/css/vertical-layout-light/style.css")}}">
+  <link rel="stylesheet" href="{{asset("../asset_admin/css/vertical-layout-light/add_custom_style.css")}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset("../asset_admin/images/favicon.png")}}" />
   @yield('css')
@@ -38,7 +39,7 @@
                   <i class="icon-search"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Tìm kiếm" aria-label="search" aria-describedby="search">
             </div>
           </li>
         </ul>

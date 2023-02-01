@@ -1,6 +1,7 @@
 @extends('layouts/layout_web')
 @section('css')
-<style src="{{asset("../asset_admin/bootstrap.min.css")}}"></style>
+ <!--Add icon dropdown-->
+ <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
 @endsection
 @section('main')
 <div class="main-panel">
@@ -11,19 +12,19 @@
             <div class="col-12 col-xl-8 mb-4 mb-xl-0">
               <h3 class="font-weight-bold">Welcome Aamir</h3>
               <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
-            </div>
+            </div> 
             <div class="col-12 col-xl-4">
              <div class="justify-content-end d-flex">
               <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                 <i class="mdi mdi-calendar"></i> Today (10 Jan 2021)
+                <button disabled class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                 <i class="icon-calendar menu-icon mdi mdi-calendar"></i> Today (10 Jan 2021)
                 </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
+                {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
                   <a class="dropdown-item" href="#">January - March</a>
                   <a class="dropdown-item" href="#">March - June</a>
                   <a class="dropdown-item" href="#">June - August</a>
                   <a class="dropdown-item" href="#">August - November</a>
-                </div>
+                </div> --}}
               </div>
              </div>
             </div>
@@ -98,17 +99,17 @@
             <div class="card-body">
               <p class="card-title">Advanced Table</p>
              <!-- Example split danger button -->
-             <div class="btn-group">
-              <button type="button" class="btn btn-danger">Lọc</button>
-              <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
+             <div class="dropdown">
+              <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
               </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Sản phẩm còn ít</a>
-                <a class="dropdown-item" href="#">Sản phẩm trong kho</a>
-                <a class="dropdown-item" href="#">Đã xuất hôm nay</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+                <h6 class="dropdown-header">Settings</h6>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">..</a>
+                <a class="dropdown-item" href="#">Separated link</a>
               </div>
             </div>
               <div class="row">
@@ -117,14 +118,14 @@
                     <table id="example" class="display expandable-table" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Quote#</th>
-                          <th>Product</th>
-                          <th>Business type</th>
-                          <th>Policy holder</th>
-                          <th>Premium</th>
-                          <th>Status</th>
-                          <th>Updated at</th>
-                          <th></th>
+                          <th>Stt#</th>
+                          <th>Loại sản phẩm</th>
+                          <th>Sản phẩm</th>
+                          <th>Số lượng</th>
+                          <th>Giá</th>
+                          <th>Trạng thái</th>
+                          <th>Ngày tạo</th>
+                          {{-- <th></th> --}}
                         </tr>
                       </thead>
                       <tr>
@@ -135,7 +136,7 @@
                         <td>5</td>
                         <td>6</td>
                         <td>7</td>
-                        <td>8</td>
+                        {{-- <td>8</td> --}}
                       </tr>
                   </table>
                   </div>
@@ -149,8 +150,7 @@
     <!-- content-wrapper ends -->
   </div>
 @endsection()
+
 @section('js')
-<script src="{{asset("../asset_admin/jquery-3.2.1.slim.min.js")}}"></script>
-<script src="{{asset("../asset_admin/jquery-3.5.1.min.js")}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="{{asset("../asset_admin/vendors/js/vendor.bundle.base.js")}}"></script> 
 @endsection

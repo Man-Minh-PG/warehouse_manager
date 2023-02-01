@@ -31,7 +31,7 @@ Route::group(['prefix' => '_admin/home', 'controller' => HomeController::class],
     Route::get('/', 'index')->name('admin.home');
 });
 
-/*Product*/ 
+/*Product*/
 Route::group(['prefix' => '_admin/product', 'controller' => ProductsController::class], function(){
     //Process view  
     Route::get('/', 'index')->name('admin.product');
