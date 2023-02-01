@@ -7,7 +7,8 @@
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="row">
-        <div class="col-lg-12 grid-margin stretch-card">
+        <!--Show Card Table-->
+        <div class="col-lg-12 grid-margin stretch-card form_default">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">Basic Table</h4>
@@ -62,6 +63,8 @@
         </div>
       
       </div>
+      <!--End show-->
+
     </div>
     <!-- content-wrapper ends -->
   </div>
