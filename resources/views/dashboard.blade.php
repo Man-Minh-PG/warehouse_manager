@@ -2,11 +2,11 @@
 @section('css')
  <!--Add icon dropdown-->
  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
-@endsection
+ @endsection
 @section('main')
 <div class="main-panel">
     <div class="content-wrapper">
-      <div class="row">
+      <div class="row">  
         <div class="col-md-12 grid-margin">
           <div class="row">
             <div class="col-12 col-xl-8 mb-4 mb-xl-0">
@@ -51,6 +51,7 @@
         </div> --}}
         <div class="col-md-12 grid-margin transparent">
           <div class="row">
+
             <div class="col-md-6 mb-4 stretch-card transparent">
               <div class="card card-tale">
                 <div class="card-body">
@@ -108,8 +109,8 @@
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
+                {{-- <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a> --}}
               </div>
             </div>
               <div class="row">

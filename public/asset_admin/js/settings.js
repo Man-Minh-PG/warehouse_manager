@@ -1,6 +1,8 @@
 (function($) {
   'use strict';
   $(function() {
+    // show popup submenu 
+
     $(".nav-settings").on("click", function() {
       $("#right-sidebar").toggleClass("open");
     });

@@ -288,7 +288,7 @@
           </div>
           <!-- chat tab ends -->
         </div>
-      </div>
+        </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -426,6 +426,9 @@
         </ul>
       </nav>
       <!-- partial -->
+      <div class="container alert alert-success" role="alert">
+        This is a success alert—check it out!
+      </div>
       @yield('main')  
       <!-- main-panel ends -->
       <!-- partial:partials/_footer.html -->

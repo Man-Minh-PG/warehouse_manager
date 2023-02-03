@@ -7,7 +7,9 @@
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="row">
-        
+        {{-- <div class="alert alert-success">
+          <strong>Success!</strong> Indicates a successful or positive action.
+        </div>  --}}
          <!--Hide -->
          <div class="col-md-12 grid-margin stretch-card form_hidden">
             <div class="card">
@@ -64,6 +66,7 @@
     </div>
     <!-- content-wrapper ends -->
   </div>
+</div>
 </div>
 @stop()
 @section('js')
