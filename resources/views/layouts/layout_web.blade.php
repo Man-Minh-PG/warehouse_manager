@@ -426,9 +426,7 @@
         </ul>
       </nav>
       <!-- partial -->
-      <div class="container alert alert-success" role="alert">
-        This is a success alert—check it out!
-      </div>
+
       @yield('main')  
       <!-- main-panel ends -->
       <!-- partial:partials/_footer.html -->
@@ -440,20 +438,19 @@
         <div class="d-sm-flex justify-content-center justify-content-sm-between">
           <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Distributed by <a href="https://www.themewagon.com/" target="_blank">Themewagon</a></span> 
         </div>
-      </footer> 
+    </footer> 
       <!-- partial -->
     </div>
     </div>   
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
- 
   @yield('js')
-  
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
 
-  <!-- End plugin js for this page -->
+  <!-- Add library Notify.js -->
+  {{-- <script src="{{asset("../asset_admin/library/notify.min.js")}}"></script> --}}
+  <!-- End Add library -->
+
   <!-- inject:js -->
   <script src="{{asset("../asset_admin/js/off-canvas.js")}}"></script>
   <script src="{{asset("../asset_admin/js/hoverable-collapse.js")}}"></script>
@@ -461,9 +458,16 @@
   <script src="{{asset("../asset_admin/js/settings.js")}}"></script>
   <script src="{{asset("../asset_admin/js/todolist.js")}}"></script>
   <!-- endinject -->
-  <!-- Custom js for this page-->
-  <!-- End custom js for this page-->
-</body>
 
+  <script>
+  // $.notify("Hello World", {
+  //     // default class (string or [string])
+  //   className: 'success',
+  //   // if autoHide, hide after milliseconds
+  //   autoHideDelay: 2000,
+  // });
+  </script>
+
+</body>
 </html> 
 
