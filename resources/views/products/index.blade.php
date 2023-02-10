@@ -49,7 +49,7 @@
                       <td>    
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <button type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-pencil-alt"></i></button>
-                          <button type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-trash"></i></button>
+                          <button onclick ="delete_row_in_table($(this))" type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-trash"></i></button>
                           <button type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-eye"></i></button>
                         </div>                  
                       </td>
@@ -72,4 +72,5 @@
 @stop()
 @section('js')
   <script src="{{asset("../asset_admin/vendors/js/vendor.bundle.base.js")}}"></script>  
+  <script src="{{asset("../asset_admin/js/custom/custom_script.js")}}"></script>
 @endsection

@@ -1,0 +1,36 @@
+Một website quản lý kho hàng cần các chức năng sau:
+
+Quản lý sản phẩm: Thêm, sửa, xóa sản phẩm, tìm kiếm và xem thông tin chi tiết về sản phẩm.
+
+Quản lý nhập kho: Thêm, sửa và xóa hóa đơn nhập kho, tính toán số lượng sản phẩm trong kho và tìm kiếm lịch sử nhập kho.
+
+Quản lý xuất kho: Thêm, sửa và xóa hóa đơn xuất kho, tính toán số lượng sản phẩm trong kho và tìm kiếm lịch sử xuất kho.
+
+Quản lý tồn kho: Xem số lượng sản phẩm trong kho và cảnh báo khi số lượng sản phẩm dưới mức tồn kho tối thiểu.
+
+Quản lý báo cáo: Tạo và xuất báo cáo về sản phẩm, nhập kho, xuất kho và tồn kho.
+    
+Quản lý người dùng: Thêm, sửa và xóa tài khoản người dùng, phân quyền truy cập và tìm kiếm lịch sử hoạt động của người dùng.
+
+Bảo mật dữ liệu: Sử dụng mã hoá dữ liệu và xác thực người dùng để bảo mật thông tin.
+
+invoice
+id
+amount
+total
+note
+status
+
+invoice_details
+id 
+invoice_id
+product_id
+amount
+total
+status
+
+--product
+add status - con hang - it hang - het - loi 
+
+
+

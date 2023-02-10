@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\unit_codes;
-use App\Http\Requests\Storeunit_codesRequest;
-use App\Http\Requests\Updateunit_codesRequest;
+use App\Models\invoice_details;
+use App\Http\Requests\Storeinvoice_detailsRequest;
+use App\Http\Requests\Updateinvoice_detailsRequest;
 
-class UnitCodesController extends Controller
+class InvoiceDetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class UnitCodesController extends Controller
      */
     public function index()
     {
-        return view("units/unit");
+        //
     }
 
     /**
@@ -31,10 +31,10 @@ class UnitCodesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Storeunit_codesRequest  $request
+     * @param  \App\Http\Requests\Storeinvoice_detailsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Storeunit_codesRequest $request)
+    public function store(Storeinvoice_detailsRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class UnitCodesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\unit_codes  $unit_codes
+     * @param  \App\Models\invoice_details  $invoice_details
      * @return \Illuminate\Http\Response
      */
-    public function show(unit_codes $unit_codes)
+    public function show(invoice_details $invoice_details)
     {
         //
     }
@@ -53,10 +53,10 @@ class UnitCodesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\unit_codes  $unit_codes
+     * @param  \App\Models\invoice_details  $invoice_details
      * @return \Illuminate\Http\Response
      */
-    public function edit(unit_codes $unit_codes)
+    public function edit(invoice_details $invoice_details)
     {
         //
     }
@@ -64,11 +64,11 @@ class UnitCodesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Updateunit_codesRequest  $request
-     * @param  \App\Models\unit_codes  $unit_codes
+     * @param  \App\Http\Requests\Updateinvoice_detailsRequest  $request
+     * @param  \App\Models\invoice_details  $invoice_details
      * @return \Illuminate\Http\Response
      */
-    public function update(Updateunit_codesRequest $request, unit_codes $unit_codes)
+    public function update(Updateinvoice_detailsRequest $request, invoice_details $invoice_details)
     {
         //
     }
@@ -76,10 +76,10 @@ class UnitCodesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\unit_codes  $unit_codes
+     * @param  \App\Models\invoice_details  $invoice_details
      * @return \Illuminate\Http\Response
      */
-    public function destroy(unit_codes $unit_codes)
+    public function destroy(invoice_details $invoice_details)
     {
         //
     }

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ProductTypesController;
+use App\Http\Controllers\WarehouseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,7 +75,7 @@ Route::group(['prefix' => '_admin/unit', 'controller' => UnitCodes::class], func
 
 /*Warehouse*/ 
 Route::group(['prefix' => '_admin/warehouse', 'controller' => WarehouseController::class], function(){
-    Route::get('/', 'index')->name('admin.home');
+    Route::get('/', 'index')->name('admin.warehouse');
 });
 
 /*History*/ 

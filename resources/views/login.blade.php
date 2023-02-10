@@ -34,7 +34,7 @@
               </div>
               <h4>Hello! let's get started</h4> <!--Sub: Xin chao ngay moi tot lanh-->
               <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form role="form" action="{{Route('show_login')}}" class="pt-3" method="POST" >
+              <form role="form" action="{{Route('show')}}" class="pt-3" method="POST" >
                 @csrf
                 <div class="form-group">
                   <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
