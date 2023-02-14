@@ -15,7 +15,7 @@ class UnitCodesController extends Controller
      */
     public function index()
     {
-        return view("units/unit");
+        return view("units/index");
     }
 
     /**

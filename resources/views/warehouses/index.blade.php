@@ -12,7 +12,7 @@
       <div class="col-md-4 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Top aligned media</h4>
+            <h4 class="card-title">Nhập hàng</h4>
             <div class="media">
               <i class="ti-world icon-md text-info d-flex align-self-start mr-3"></i>
               <div class="media-body">
@@ -26,7 +26,7 @@
       <div class="col-md-4 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Center aligned media</h4>
+            <h4 class="card-title">Xuất ...</h4>
             <div class="media">
               <i class="ti-world icon-md text-info d-flex align-self-center mr-3"></i>
               <div class="media-body">
@@ -37,20 +37,22 @@
         </div>
       </div>
 
+      <!--Kho-->
       <div class="col-md-4 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Bottom aligned media</h4>
+            <h4 class="card-title">Kho</h4>
             <div class="media">
               <i class="ti-world icon-md text-info d-flex align-self-end mr-3"></i>
               <div class="media-body">
-                <p class="card-text">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque.</p>
+                <p class="card-text">Ql những sản phẩm hiện đang có trong kho.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!--Kho-->
+      
       <!--Table-->
       <div class="col-lg-12 grid-margin stretch-card form_default">
         <div class="card">
@@ -76,7 +78,7 @@
                     <th>Sản phẩm</th>
                     <th>Số lượng</th>
                     <th>Trạng thái</th>
-                    <th> </th>
+                    <th>Thời gian nhập hàng gần nhất</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -85,6 +87,7 @@
                     <td>Text SP</td>
                     <td>100 / Text3</td>
                     <td><label class="badge badge-danger">Pending</label></td>
+                    <td>dd-mm-yyyy h-m-s</td>
                     <td>    
                       <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-pencil-alt"></i></button>

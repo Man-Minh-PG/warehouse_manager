@@ -18,7 +18,7 @@ class HistorysController extends Controller
      */
     public function index()
     {
-        //
+        return view("historys/index");
     }
 
     /**

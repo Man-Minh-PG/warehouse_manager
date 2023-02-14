@@ -11,14 +11,18 @@
         <div class="col-lg-12 grid-margin stretch-card form_default">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Basic Table</h4>
+              <h4 class="card-title">Product Table</h4>
               <p class="card-description add_inline_block">
                 <code>(*)</code>Bấm vào <b class="text_red">Chi tiết</b> để xem chi tiết sản phẩm | <code>(*)</code>Bấm vào đây để thêm sản phẩm
-                <button type="button" class="btn btn-light custom_small_radius_button">Thêm</button>
+                <a href="{{Route("admin.product.create")}}" class="btn btn-light custom_small_radius_button">Thêm</a>
                 <div class="dropdown add_inline">
                   <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Lọc sản phẩm
                   </button>
+                  <button type="button" class="btn btn-outline-info btn-icon-text print_excel">
+                    Nhập file
+                    <i class="ti-import btn-icon-append"></i>
+                  </button> 
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
                     <h6 class="dropdown-header">Tiêu chí</h6>
                     <a class="dropdown-item" href="#">Action</a>
@@ -37,7 +41,9 @@
                       <th>Sản phẩm</th>
                       <th>Số lượng</th>
                       <th>Trạng thái</th>
-                      <th> </th>
+                      <th>Ngày tạo</th>
+                      <th>Lần cập nhật gần nhất</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -46,6 +52,8 @@
                       <td>Text SP</td>
                       <td>100 / Text3</td>
                       <td><label class="badge badge-danger">Pending</label></td>
+                      <td>dd-mm-yyyy</br> h-m-s</td>
+                      <td>dd-mm-yyyy</br> h-m-s</td>
                       <td>    
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <button type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-pencil-alt"></i></button>

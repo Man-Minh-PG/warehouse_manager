@@ -17,3 +17,23 @@ button.custom_small_radius_button {
 /* .add_inline {
     display: inline;
 } */
+
+/* CSS cho layout trên PC */
+@media screen and (min-width: 768px) {
+    /* Đặt các style cho layout trên PC ở đây */
+    .print_excel {
+        right: 42px;
+        position: absolute;
+    }
+  }
+  
+  /* CSS cho layout trên điện thoại */
+  @media screen and (max-width: 767px) {
+    /* Đặt các style cho layout trên điện thoại ở đây */
+    .print_excel {    
+        position: absolute;
+        top: 14px;
+        right: 13px;
+    }
+  }
+

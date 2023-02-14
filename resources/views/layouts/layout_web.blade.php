@@ -381,43 +381,43 @@
               </ul>
             </div>
           </li> --}}
-          <li class="nav-item">
-            <a class="nav-link" href="">
+          <li class="nav-item item1">
+            <a class="nav-link" href="{{Route("admin.home")}}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Thống kê</span>
             </a>
           </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item item2">
+            <a class="nav-link" href="{{Route("admin.unit")}}">
               <i class="icon-box menu-icon"></i>
               <span class="menu-title">Quản lý đơn vị</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item item3">
+            <a class="nav-link" href="{{Route("admin.product_type")}}">
               <i class="icon-layers menu-icon"></i>
               <span class="menu-title">Quản lý loại sản phẩm</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item item4">
+            <a class="nav-link" href="{{Route("admin.product")}}">
               <i class="icon-briefcase menu-icon"></i>
               <span class="menu-title">Quản lý sản phẩm</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item item5">
+            <a class="nav-link" href="{{Route("admin.warehouse")}}">
               <i class="icon-cloud menu-icon"></i>
               <span class="menu-title">Quản lý kho</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item item6">
+            <a class="nav-link" href="{{Route("admin.history")}}">
               <i class="icon-clock menu-icon"></i>
               <span class="menu-title">Lịch xử thao tác</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item item7">
             <a class="nav-link" href="#">
               <i class="icon-help menu-icon"></i>
               <span class="menu-title">Đăng Xuất</span>

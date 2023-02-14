@@ -1,5 +1,11 @@
 @extends('layouts/layout_web')
 @section('css')
+<style>
+  .item1 {
+    border-radius: 15px;
+    background-color: #4747A1;;
+  }
+</style>
  <!--Add icon dropdown-->
  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
  @endsection

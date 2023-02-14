@@ -14,6 +14,11 @@ Quản lý người dùng: Thêm, sửa và xóa tài khoản người dùng, ph
 
 Bảo mật dữ liệu: Sử dụng mã hoá dữ liệu và xác thực người dùng để bảo mật thông tin.
 
+Sản phẩm -> show ra toàn bộ sản phẩm -> dù sản phẩm có số lượng là 0
+Kho -> cũng là show sản phẩm -> nhưng mà là show những sản phẩm hiện đang có trong kho || còn ít -> k show những sản phẩm = 0 như qlsp
+
+Dashboard -> sp CHẠY nhất, sp tồn lâu nhất (đk....), nhập tháng này, xuất tháng này,...
+
 invoice
 id
 amount
