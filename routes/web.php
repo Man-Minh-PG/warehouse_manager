@@ -78,6 +78,10 @@ Route::group(['prefix' => '_admin/unit', 'controller' => UnitCodesController::cl
 /*Warehouse*/ 
 Route::group(['prefix' => '_admin/warehouse', 'controller' => WarehouseController::class], function(){
     Route::get('/', 'index')->name('admin.warehouse');
+    Route::get('/import_product', 'import_product')->name('admin.warehouse.import_product');
+    Route::get('/export_product', 'export_product')->name('admin.warehouse.export_product');
+    Route::get('/show', 'show')->name('admin.warehouse.show');
+
 });
 
 /*History*/ 

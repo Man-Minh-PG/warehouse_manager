@@ -2,7 +2,16 @@
 @section('css')
  <!--Add icon dropdown-->
  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
-@endsection
+ <style>
+  .item2 {
+    border-radius: 15px;
+    background-color: #4747A1;
+  }
+  span.menu-title.title2{
+    color: white !important;
+  } 
+</style>
+ @endsection
 @section('main')
 <div class="main-panel">
     <div class="content-wrapper">

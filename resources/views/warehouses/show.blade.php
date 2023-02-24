@@ -20,7 +20,7 @@
         <div class="col-lg-12 grid-margin stretch-card form_default">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Product Table</h4>
+              <h4 class="card-title">Danh sách hóa đơn $title</h4>
               <p class="card-description add_inline_block">
                 <code>(*)</code>Bấm vào <b class="text_red">Chi tiết</b> để xem chi tiết sản phẩm | <code>(*)</code>Bấm vào đây để thêm sản phẩm
                 <a href="{{Route("admin.product.create")}}" class="btn btn-light custom_small_radius_button">Thêm</a>

@@ -2,6 +2,15 @@
 @section('css')
  <!--Add icon dropdown-->
  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">
+ <style>
+  .item6 {
+    border-radius: 15px;
+    background-color: #4747A1;
+  }
+  span.menu-title.title6{
+    color: white !important;
+  } 
+</style>
 @endsection
 @section('main')
 <div class="main-panel">
@@ -45,7 +54,7 @@
                     <td> Herman Beck </td>
                     <td> May 15, 2015!123456789 </td>
                     <td> QL San Pham </td>
-                    <td> dd-mm-yyyy </td>
+                    <td> dd-mm-yyyy </td> 
                   </tr>
                 </tbody>
               </table>

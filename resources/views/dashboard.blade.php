@@ -3,8 +3,11 @@
 <style>
   .item1 {
     border-radius: 15px;
-    background-color: #4747A1;;
+    background-color: #4747A1;
   }
+  span.menu-title.title1{
+    color: white !important;
+  } 
 </style>
  <!--Add icon dropdown-->
  <link rel="stylesheet" href="{{asset("../asset_admin/vendors/ti-icons/css/themify-icons.css")}}">

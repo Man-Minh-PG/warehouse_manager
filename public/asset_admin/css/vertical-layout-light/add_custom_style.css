@@ -1,11 +1,3 @@
-button.custom_small_radius_button {
-    border-radius: 20px;
-    font-size: 13px;
-    line-height: 1;
-    padding: 0.375rem 1.5625rem;
-    font-weight: normal;
-}
-
 .text_red {
     color: red;
 }
@@ -32,8 +24,88 @@ button.custom_small_radius_button {
     /* Đặt các style cho layout trên điện thoại ở đây */
     .print_excel {    
         position: absolute;
-        top: 14px;
+        top: -11px;
         right: 13px;
     }
   }
 
+/* CSS tags a*/
+/* unvisited link */
+a.a_custom:link {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* visited link */
+  a.a_custom:visited {
+    color: yellow;
+  }
+  
+  /* mouse over link */
+  a.a_custom:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a.a_custom:active {
+    color: blue;
+  }
+
+  /* Custom card in hover*/
+  /*link author : https://freefrontend.com/bootstrap-cards/*/
+  /*root: CARD HOVER EFFECT https://codepen.io/kalpeshpurohit/pen/ZEWVrKj*/
+  .solution_cards_box .solution_card {
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+      0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   /* min-height: 265px;*/
+    transition: 0.7s;
+  }
+  
+  .solution_cards_box .solution_card:hover {
+    background: #309df0;
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9;
+  }
+  
+  .solution_cards_box .solution_card:hover::before {
+    background: rgb(85 108 214 / 10%);
+  }
+  
+  .solution_cards_box .solution_card:before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 5%);
+    width: 170px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(42deg);
+    right: -56px;
+    top: -23px;
+    border-radius: 35px;
+  }
+  
+  /*custom color bootrap button*/
+  /*Change background color btn*/
+  /*https://stackoverflow.com/questions/28261287/how-to-change-btn-color-in-bootstrap*/
+  .btn-green-400,
+  .btn-green-400:active,
+  .btn-green-400:visited,
+  .btn-green-400:focus {
+      background-color: #a3cfc4;
+      border-color: #365a4f;
+      font-weight: bold;
+      color: black;
+  }
+
+  .btn-green-400:hover {
+      background-color: #81b970;  
+      border-color: #e6cd42;
+  }

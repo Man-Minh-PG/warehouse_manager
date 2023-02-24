@@ -22,13 +22,23 @@ class WarehouseController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing import of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function import_product()
     {
-        //
+        return view("warehouses/import_product");
+    }
+
+     /**
+     * Display a listing export of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function export_product()
+    {
+        return view("warehouses/export_product");
     }
 
     /**
@@ -44,6 +54,8 @@ class WarehouseController extends Controller
 
     /**
      * Display the specified resource.
+     * Use show list data for two screen import and export data
+     * Send $list_data
      *
      * @param  \App\Models\acccount_historys  $acccount_historys
      * @return \Illuminate\Http\Response

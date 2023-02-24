@@ -38,4 +38,8 @@ status
 add status - con hang - it hang - het - loi 
 
 
+ Delete ADD Prd
 
+Nhap Hg -> 
++ CH
++ Excel
