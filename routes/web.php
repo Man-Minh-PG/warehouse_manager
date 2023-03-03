@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsController;
@@ -19,24 +20,26 @@ use App\Http\Controllers\UnitCodesController;
 |
 */
 
-
+/*Default*/
 Route::group(['prefix' => '/', 'controller' => HomeController::class, 'middleware' => 'auth'], function(){
-    Route::get('/', 'index')->name('admin.home');
+    Route::get('/', 'index');
 });
 
-/*Account*/
-Route::group(['controller' => UserController::class], function(){
+/*Login*/
+Route::group(['controller' => LoginController::class], function(){
     Route::get('/login', 'index')->name('login');
     Route::get('/logout', 'logout')->name('logout');
+
+    Route::post('/authenticate', 'authenticate')->name('authenticate');
 });
 
 /*Home Page*/
-Route::group(['prefix' => '_admin/home', 'controller' => HomeController::class], function(){
+Route::group(['prefix' => '_admin/home', 'controller' => HomeController::class, 'middleware' => 'auth'], function(){
     Route::get('/', 'index')->name('admin.home');
 });
 
 /*Product*/
-Route::group(['prefix' => '_admin/product', 'controller' => ProductsController::class], function(){
+Route::group(['prefix' => '_admin/product', 'controller' => ProductsController::class, 'middleware' => 'auth'], function(){
     //Process view  
     Route::get('/', 'index')->name('admin.product');
     Route::get('/create', 'create')->name('admin.product.create');
@@ -50,7 +53,7 @@ Route::group(['prefix' => '_admin/product', 'controller' => ProductsController::
 });
 
 /*Product Type*/ 
-Route::group(['prefix' => '_admin/product_type', 'controller' => ProductTypesController::class], function(){
+Route::group(['prefix' => '_admin/product_type', 'controller' => ProductTypesController::class, 'middleware' => 'auth'], function(){
     //Process view
     Route::get('/', 'index')->name('admin.product_type');
     Route::get('/create', 'create')->name('admin.product_type.create');
@@ -63,7 +66,7 @@ Route::group(['prefix' => '_admin/product_type', 'controller' => ProductTypesCon
 });
 
 /*Unit Code*/ 
-Route::group(['prefix' => '_admin/unit', 'controller' => UnitCodesController::class], function(){
+Route::group(['prefix' => '_admin/unit', 'controller' => UnitCodesController::class, 'middleware' => 'auth'], function(){
     //Process view
     Route::get('/', 'index')->name('admin.unit');
     Route::get('/create', 'create')->name('admin.unit.create');
@@ -76,7 +79,7 @@ Route::group(['prefix' => '_admin/unit', 'controller' => UnitCodesController::cl
 });
 
 /*Warehouse*/ 
-Route::group(['prefix' => '_admin/warehouse', 'controller' => WarehouseController::class], function(){
+Route::group(['prefix' => '_admin/warehouse', 'controller' => WarehouseController::class, 'middleware' => 'auth'], function(){
     Route::get('/', 'index')->name('admin.warehouse');
     Route::get('/import_product', 'import_product')->name('admin.warehouse.import_product');
     Route::get('/export_product', 'export_product')->name('admin.warehouse.export_product');
@@ -85,13 +88,6 @@ Route::group(['prefix' => '_admin/warehouse', 'controller' => WarehouseControlle
 });
 
 /*History*/ 
-Route::group(['prefix' => '_admin/history', 'controller' => HistorysController::class], function(){
+Route::group(['prefix' => '_admin/history', 'controller' => HistorysController::class, 'middleware' => 'auth'], function(){
     Route::get('/', 'index')->name('admin.history');
 });
-
-// Route::group(['prefix' => '_admin/home', 'controller' => HomeController::class, 'middleware' => 'auth'], function(){
-//     Route::get('/', 'index')->name('admin.home');
-// });
-
-
-/*Xem xet den truong hop*/

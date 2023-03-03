@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;    
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;  
 use App\Models\User;  
 // use App\Http\Requests\StoreaccountsRequest;
 // use App\Http\Requests\UpdateaccountsRequest;
-use Illuminate\Support\Facades\DB; 
+// use Illuminate\Support\Facades\DB; 
 // use Illuminate\Database\Eloquent\ModelNotFoundException; 
 // use Carbon\Carbon;
 
@@ -114,22 +111,4 @@ class UserController extends Controller
     {
         //
     }
-
-    /**
-     * Logout
-     *
-     * @param  \App\Http\Requests\UpdateaccountsRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function logout(request $request)
-    {
-        Auth::logout();
-
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
-        return redirect('/');
-    }
-
 }
