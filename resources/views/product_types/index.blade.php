@@ -101,21 +101,21 @@
       <div class="col-md-12 grid-margin stretch-card form_hidden">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Product Form</h4>
+            <h4 class="card-title">Thêm loại sản phẩm</h4>
             <p class="card-description">
-              Product form layout
+              Biểu mẫu thêm thông tin cho loại sản phẩm
             </p>
             
-            {{-- <form action="#" class="forms-sample"> --}}
+            <form action="{{Route('admin.product_type.store')}}" method="POST" class="forms-sample"> @csrf
               <div class="form-group row">
                 <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Loại sản phẩm</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="productType" placeholder="Username">
+                  <input type="text" name="name" class="form-control" id="productType0" placeholder="Điện gia dụng">
                 </div>
               </div>
-              <button class="btn btn-primary mr-2" id="add_value">Thêm</button>
+              <button class="btn btn-primary mr-2" type="submit" id="add_value">Thêm</button>
               <button class="btn btn-light clear">Clear</button>
-            {{-- </form> --}}
+            </form>
 
           </div>
         </div>

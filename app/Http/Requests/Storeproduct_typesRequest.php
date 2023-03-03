@@ -13,7 +13,9 @@ class Storeproduct_typesRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        // return false;
+        //Note authorsize
+        return true;
     }
 
     /**
@@ -24,7 +26,23 @@ class Storeproduct_typesRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            // Let's add a few validation rules
+            'name' => 'required|string|max:255'
+        ];
+    }
+
+     /**
+     * Custom messeage validation.  
+     *
+     * @return array<string, mixed>
+     */
+    public function message()
+    {
+        return [
+            // Custom comment
+            'name.max'      => 'Tên của loại phải nhỏ hơn 225 ký tự',
+            'name.required' => config('messagescommon.message.required') ,
+            'name.string'   => 'Tên của loại bắt buộc phải là chữ cái'  
         ];
     }
 }

@@ -36,7 +36,13 @@ class ProductTypesController extends Controller
      */
     public function store(Storeproduct_typesRequest $request)
     {
-        //
+        $productType = new product_types();
+        $product_types->fill([
+            'name' => $request->name
+        ]);
+        $product_types->save();
+
+        return redirect()->route('admin.product_type')->with('notification','Add product successful');
     }
 
     /**
