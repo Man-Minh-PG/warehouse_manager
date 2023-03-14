@@ -20,18 +20,18 @@
       <div class="col-lg-12 grid-margin stretch-card form_default">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Unit Table</h4>
+            <h4 class="card-title">Bảng đơn vị hàng hóa</h4>
             <p class="card-description add_inline_block">
-              <code>(*)</code>Bấm vào <b class="text_red">Chi tiết</b> để xem chi tiết sản phẩm | <code>(*)</code>Bấm vào đây để thêm sản phẩm
+              {{-- <code>(*)</code>Bấm vào <b class="text_red">Chi tiết</b> để xem chi tiết sản phẩm | <code>(*)</code>Bấm vào đây để thêm sản phẩm --}}
               <button type="button" class="btn btn-light custom_small_radius_button">Thêm</button>
               <div class="dropdown add_inline">
                 <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Lọc sản phẩm
+                  Lọc đơn vị hàng hóa
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
                   <h6 class="dropdown-header">Tiêu chí</h6>
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Được thêm gần nhất</a>
+                  <a class="dropdown-item" href="#">Được thêm lâu nhất</a>
                   <a class="dropdown-item" href="#">Something else here</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Separated link</a>
@@ -50,20 +50,22 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($unit_codes as $item)       
                   <tr>
-                    <td>#1</td>
-                    <td id="nameType1">Text SP</td>
-                    <td>dd-mm-yyyy</td>
-                    <td>dd-mm-yyyy</td>
+                    <td>#{{$item->id}}</td>
+                    <td id="nameType1">{{$item->name}}</td>
+                    <td>{{$item->created_date->format('d-m-Y')}}</td>
+                    <td>{{$item->updated_date->format('d-m-Y')}}</td>
                     <td>    
                       <div class="btn-group" role="group" aria-label="Basic example">
                         <button onclick='get_value_in_form($("#nameType1").text())' data-toggle="modal" data-target="#exampleModalCenter" type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-pencil-alt"></i></button>
-                        <button onclick ="delete_row_in_table($(this))" type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-trash"></i></button>
+                        <form action="{{route('admin.unit.destroy', $item->id)}}" method="POST"><button onclick ="delete_row_in_table($(this))" type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-trash"></i></button></form>
                         <button type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-eye"></i></button>
                       </div>                  
                     </td> 
                     <!--Link icon themify {class ti-xx}: https://themify.me/themify-icons-->
-                  </tr>  
+                  </tr> 
+                  @endforeach 
                 </tbody>
               </table>
             </div>
@@ -76,22 +78,24 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật thông tin đơn vị</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            <form action="{{Route('admin.unit.update')}}" method="POST"> @csrf @method('PATCH')
             <div class="modal-body">
               <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="text"  class="form-control" id="modalInput1" aria-describedby="desHelp" placeholder="Enter email">
-                <small id="desHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="exampleInputEmail1">Tên đơn vị</label>
+                <input type="text" name="name" class="form-control" id="modalInput1" aria-describedby="desHelp">
+                <small id="desHelp" class="form-text text-muted">Vd: 1 Thùng, 1 Hộp,...vv.</small>
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-primary">Lưu hoàn tất</button>
             </div>
+          </form>
           </div>
         </div>
       </div>
@@ -101,12 +105,13 @@
       <div class="col-md-12 grid-margin stretch-card form_hidden">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Unit Form</h4>
+            <h4 class="card-title">Thêm đơn vị hàng hóa</h4>
             <p class="card-description">
-              Unit form layout
+              Biễu mẫu thêm đơn vị
             </p>
             
-            {{-- <form action="#" class="forms-sample"> --}}
+            <form action="{{Route('admin.unit.store')}}" class="forms-sample" method="POST">
+              @csrf
               <div class="form-group row">
                 <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Tên đơn vị</label>
                 <div class="col-sm-9">
@@ -116,7 +121,7 @@
            
               <button class="btn btn-primary mr-2" id="add_value">Thêm</button>
               <button class="btn btn-light clear">Clear</button>
-            {{-- </form> --}}
+            </form>
 
           </div>
         </div>
@@ -131,7 +136,7 @@
 @section('js')
   <script src="{{asset("../asset_admin/vendors/js/vendor.bundle.base.js")}}"></script>  
   <script src="{{asset("../asset_admin/js/custom/custom_script.js")}}"></script>
-  // This is a single line comment.
+  
   <script>
     function get_value_in_form(value) {
       $('#modalInput1').val(value);

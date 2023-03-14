@@ -22,16 +22,16 @@
           <div class="card-body">
             <h4 class="card-title">Product Type Table</h4>
             <p class="card-description add_inline_block">
-              <code>(*)</code>Bấm vào <b class="text_red">Chi tiết</b> để xem chi tiết sản phẩm | <code>(*)</code>Bấm vào đây để thêm sản phẩm
+              {{-- <code>(*)</code>Bấm vào <b class="text_red">Chi tiết</b> để xem chi tiết sản phẩm | <code>(*)</code>Bấm vào đây để thêm sản phẩm --}}
               <button type="button" class="btn btn-light custom_small_radius_button">Thêm</button>
               <div class="dropdown add_inline">
                 <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Lọc sản phẩm
+                  Lọc loại sản phẩm
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
-                  <h6 class="dropdown-header">Tiêu chí</h6>
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
+                  <h6 class="dropdown-header">Tiêu chí lọc</h6>
+                  <a class="dropdown-item" href="#">Theo ngày tạo (mới nhất)↓</a>
+                  <a class="dropdown-item" href="#">Theo Tên (A-Z) ↓</a>
                   <a class="dropdown-item" href="#">Something else here</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Separated link</a>
@@ -50,20 +50,22 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($product_types as $item)
                   <tr>
-                    <td>#1</td>
-                    <td id="nameType1">Text SP</td>
+                    <td id="id{{$item->id}}">#1</td>
+                    <td id="nameType{{$item->name}}">Text SP</td>
                     <td>dd-mm-yyyy</td>
                     <td>dd-mm-yyyy</td>
                     <td>    
                       <div class="btn-group" role="group" aria-label="Basic example">
-                        <button onclick='get_value_in_form($("#nameType1").text())' data-toggle="modal" data-target="#exampleModalCenter" type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-pencil-alt"></i></button>
+                        <button onclick ='get_value_in_form($("#nameType{{$item->name}}").text(), $("#id{{$item->id}}").text())' data-toggle="modal" data-target="#exampleModalCenter" type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-pencil-alt"></i></button>
                         <button onclick ="delete_row_in_table($(this))" type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-trash"></i></button>
                         <button type="button" class="btn btn-outline-secondary btn-icon"><i class="ti-eye"></i></button>
                       </div>                  
                     </td> 
                     <!--Link icon themify {class ti-xx}: https://themify.me/themify-icons-->
                   </tr>  
+                  @endforeach
                 </tbody>
               </table>
             </div>
@@ -81,20 +83,22 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
+            <form id="edit_form" action="{{Route('admin.product_type.update')}}" method="POST"> @csrf  @method('PATCH')
             <div class="modal-body">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="text"  class="form-control" id="modalInput1" aria-describedby="desHelp" placeholder="Enter email">
-                <small id="desHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="text" name="mail" class="form-control" id="modalInput1" aria-describedby="desHelp">
+                <small id="desHelp" class="form-text text-muted">Nhập tên loại sản phẩm .</small>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" id="saveChange" class="btn btn-primary">Save changes</button>
             </div>
+          </form>
           </div>
         </div>
-      </div>
+      </div>  
       <!--End Show Modal -->
       
       <!--Hide -->
@@ -130,10 +134,26 @@
 @section('js')
   <script src="{{asset("../asset_admin/vendors/js/vendor.bundle.base.js")}}"></script>  
   <script src="{{asset("../asset_admin/js/custom/custom_script.js")}}"></script>
-  // This is a single line comment.
+  {{-- This is a single line comment. --}}
   <script>
-    function get_value_in_form(value) {
+    function get_value_in_form(value, id) {
       $('#modalInput1').val(value);
+
+      $('#saveChange').click(id) {
+        addHiddenField(id);
+      }  
     }
+
+    // tạo một trường ẩn khi submit form 
+    function addHiddenField(id) {
+    var form = document.getElementById("edit_form");
+
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "id");
+    hiddenField.setAttribute("value", id);
+
+    form.appendChild(hiddenField);
+}
   </script>
 @endsection

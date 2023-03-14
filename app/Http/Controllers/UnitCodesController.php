@@ -15,7 +15,8 @@ class UnitCodesController extends Controller
      */
     public function index()
     {
-        return view("units/index");
+        $unit_codes =  unit_codes::orderBy('id', 'desc')->paginate(5); 
+        return view("units/index" , compact('unit_codes'));
     }
 
     /**
@@ -36,7 +37,14 @@ class UnitCodesController extends Controller
      */
     public function store(Storeunit_codesRequest $request)
     {
-        //
+        // check duplicate name 
+        if($isIssetName = unit_codes::where('name', '=', $request->name)->exists())
+        return redirect()->route('admin.unit')->with('notification',config('messagescommon.notification.duplicate'));
+
+        // code style Laravel v9
+        unit_codes::create($request->post());
+
+        return redirect()->route('admin.unit')->with('notification', config('messagescommon.notification.success'));
     }
 
     /**
@@ -70,7 +78,16 @@ class UnitCodesController extends Controller
      */
     public function update(Updateunit_codesRequest $request, unit_codes $unit_codes)
     {
-        //
+        // check duplicate name
+        if(unit_codes::where('name', '=', $request->name)->exits()) 
+        {
+            return redirect()->route('admin.unit')->with('notification', config('messagescommon.notification.duplicate'));
+        }
+
+        // code style laravel v9
+        $unit_codes->fill($request()->post())->save();
+
+        return redirect()->route('admin.unit')->with('notification', config('messagescommon.notification.success'));
     }
 
     /**
@@ -81,6 +98,7 @@ class UnitCodesController extends Controller
      */
     public function destroy(unit_codes $unit_codes)
     {
-        //
+        $unit_codes->delete();
+        return redirect()->route('admin.unit')->with('notification', config('messagescommon.notification.delete'));
     }
 }

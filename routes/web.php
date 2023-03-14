@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProductTypesController;
 use App\Http\Controllers\WarehouseController;
@@ -57,10 +56,10 @@ Route::group(['prefix' => '_admin/product_type', 'controller' => ProductTypesCon
     //Process view
     Route::get('/', 'index')->name('admin.product_type');
     Route::get('/create', 'create')->name('admin.product_type.create');
-    Route::get('/edit/{id}', 'edit')->name('admin.product_type.edit');
+    // Route::get('/edit/{id}', 'edit')->name('admin.product_type.edit');
     //Process create - update 
     Route::post('/store', 'store')->name('admin.product_type.store');
-    Route::post('/update/{id}','update')->name('admin.product_type.update');
+    Route::patch('/update','update')->name('admin.product_type.update');
     //Process Delete
     Route::delete('/destroy/{id}', 'destroy')->name('admin.product_type.destroy');
 });
@@ -70,10 +69,10 @@ Route::group(['prefix' => '_admin/unit', 'controller' => UnitCodesController::cl
     //Process view
     Route::get('/', 'index')->name('admin.unit');
     Route::get('/create', 'create')->name('admin.unit.create');
-    Route::get('/edit/{id}', 'edit')->name('admin.unit.edit');
+    // Route::get('/edit/{id}', 'edit')->name('admin.unit.edit');
     //Process create - update 
     Route::post('/store', 'store')->name('admin.unit.store');
-    Route::post('/update/{id}','update')->name('admin.unit.update');
+    Route::patch('/update','update')->name('admin.unit.update');
     //Process Delete
     Route::delete('/destroy/{id}', 'destroy')->name('admin.unit.destroy');
 });

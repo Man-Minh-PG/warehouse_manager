@@ -15,7 +15,8 @@ class ProductTypesController extends Controller
      */
     public function index()
     {
-        return view("product_types/index");
+        $product_types = product_types::orderBy('id', 'desc')->paginate(5);
+        return view("product_types/index", compact('product_types'));
     }
 
     /**
@@ -36,13 +37,24 @@ class ProductTypesController extends Controller
      */
     public function store(Storeproduct_typesRequest $request)
     {
-        $productType = new product_types();
-        $product_types->fill([
-            'name' => $request->name
-        ]);
-        $product_types->save();
+        // check duplicate name 
+        if($isIssetName = product_types::where('name','=', $request->name)->exists())
+        return  redirect()->route('admin.product_type')->with('notification',config('messagescommon.notification.duplicate'));
+        
+        // ** New code v9 **
+        product_types::create($request->post());
 
-        return redirect()->route('admin.product_type')->with('notification','Add product successful');
+        // ** Old code v8 **
+        // $productType = new product_types();
+        // $productType->fill($request->post())->save();
+
+        // ** Clean code **
+        // $product_types->fill([
+        //     'name' => $request->name
+        // ]);
+        // $product_types->save();
+
+        return redirect()->route('admin.product_type')->with('notification',config('messagescommon.notification.success'));
     }
 
     /**
@@ -76,7 +88,20 @@ class ProductTypesController extends Controller
      */
     public function update(Updateproduct_typesRequest $request, product_types $product_types)
     {
-        //
+        // check duplicate name 
+        if($isIssetName = product_types::where('name','=', $request->name)->exists())
+        return  redirect()->route('admin.product_type')->with('notification','Tên không được trùng lặp');
+
+        // ** style code laravel v9 **
+        $product_types->fill($request->post())->save();
+ 
+        // ** Old code v8 **
+        // $product_types->fill([
+        //     'name' => $request->name
+        // ]);
+        // $product_types->save();
+
+        return redirect()->route('admin.product_type')->with('notification','Edit successful');
     }
 
     /**
@@ -87,6 +112,7 @@ class ProductTypesController extends Controller
      */
     public function destroy(product_types $product_types)
     {
-        //
+        $product_types->delete();
+        return redirect()->route('admin.product_type')->with('notification', 'Delete successful');
     }
 }

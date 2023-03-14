@@ -14,8 +14,8 @@ class Storeproduct_typesRequest extends FormRequest
     public function authorize()
     {
         // return false;
-        //Note authorsize
-        return true;
+        // Note authorsize
+        return true; 
     }
 
     /**
